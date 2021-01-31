@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Header from './containers/Header/Header';
+import Footer from './containers/Footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Switch>
 
         </Switch>
+        <Footer />
 
       </BrowserRouter>
 
