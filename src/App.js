@@ -1,12 +1,22 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+
+import Header from './containers/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      <BrowserRouter>
+        <Header />
+        <Switch>
 
-      </header>
-    </div>
+        </Switch>
+
+      </BrowserRouter>
+
+
+
+    </>
   );
 }
 
