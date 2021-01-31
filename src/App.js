@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './containers/Header/Header';
 import Footer from './containers/Footer/Footer';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-
+          <Home />
         </Switch>
         <Footer />
 
