@@ -13,6 +13,7 @@ import Home from './components/Home/Home';
 import RegisterCustomer from './components/RegisterCustomer/RegisterCustomer';
 import RegisterRestaurant from './components/RegisterRestaurant/RegisterRestaurant';
 import Login from './components/Login/Login';
+import DetailRestaurant from './components/DetailRestaurant/DetailRestaurant';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/restaurant" exact component={DetailRestaurant} />
 
 
         </Switch>
