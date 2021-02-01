@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 import './DetailRestaurant.css';
 
@@ -23,15 +25,29 @@ class DetailRestaurant extends Component {
     };
 
 
+    selectMenu = (menu) => {
+        console.log(menu);
+        this.props.history.push('/order/detail');
+        localStorage.setItem('order', JSON.stringify(menu));
+    };
+
+
     showData = () => {
         if (this.state.selectedRestaurant?._id) {
             return (
                 <div className="restaurant-details" key={this.state.selectedRestaurant._id}>
-                    <img alt={this.state.selectedRestaurant.name} 
-                    src={`https://image.tmdb.org/t/p/w300${this.state.selectedRestaurant.image}`}></img>
+                    <img alt={this.state.selectedRestaurant.name}
+                        src={`https://image.tmdb.org/t/p/w300${this.state.selectedRestaurant.image}`}></img>
                     <div className="name">Name: {this.state.selectedRestaurant.name}</div>
                     <div className="adress">Adress: {this.state.selectedRestaurant.adress}</div>
-                    <div className="delivery">Delivery: {this.state.selectedRestaurant.menuID[0].name}</div>
+                    {this.state.selectedRestaurant.menuID.map(menu => {
+                        return (
+                            <Link onClick = { () => this.selectMenu(menu)} className="menu">
+                                {menu.name}
+                            </Link>
+                        )
+                        })
+                    }
                 </div>
             )
         } else {
@@ -40,6 +56,9 @@ class DetailRestaurant extends Component {
             )
         }
     };
+
+
+
 
 
     render() {
