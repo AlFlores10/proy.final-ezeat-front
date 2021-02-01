@@ -17,7 +17,6 @@ const RegisterCustomer = () => {
                 lastname: form.lastname.value,
                 email: form.email.value,
                 password: form.password.value,
-                role: 'customer'
             }
             if (customer.firstname && customer.lastname && customer.email && customer.password) {
                 await axios.post('http://localhost:3000/customer/signup', customer)
