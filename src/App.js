@@ -6,6 +6,7 @@ import Footer from './containers/Footer/Footer';
 import Register from './containers/Register/Register';
 
 import Home from './components/Home/Home';
+import RegisterCustomer from './components/RegisterCustomer/RegisterCustomer';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/register" exact component={Register} />
+          <Route path="/customer/signup" exact component={RegisterCustomer} />
+
         </Switch>
         <Footer />
 
