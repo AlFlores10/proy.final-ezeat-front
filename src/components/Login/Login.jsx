@@ -21,6 +21,7 @@ const Login = () => {
                 console.log(res.data.error);
                 localStorage.setItem('id', null);
                 localStorage.setItem('token', null);
+                history.push('/');
             } else {
                 alert("Login OK");
                 console.log(res.data);
