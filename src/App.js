@@ -17,6 +17,7 @@ import DetailRestaurant from './components/DetailRestaurant/DetailRestaurant';
 import DetailMenu from './components/DetailMenu/DetailMenu';
 import CreateMenu from './components/CreateMenu/CreateMenu';
 import OrderRestaurant from './components/OrderRestaurant/OrderRestaurant';
+import CreateOrder from './components/CreateOrder/CreateOrder';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/order/detail" exact component={DetailMenu} />
           <Route path="/menu/create" exact component={CreateMenu} />
           <Route path="/restaurant/profile" exact component={OrderRestaurant} />
+          <Route path="/order/create" exact component={CreateOrder} />
 
 
         </Switch>

@@ -1,0 +1,44 @@
+form.create-order {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70vh;
+    align-items: center;
+}
+
+.create-order input {
+    all: unset;
+    padding: 1em;
+    width: fit-content;
+    border-radius: 0.5em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+.create-order button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.create-order a:hover,
+.create-order button:hover {
+    color: rgb(99, 100, 102);
+    cursor: pointer;
+    background-color: rgb(248, 166, 55);
+}
+
+
+::placeholder {
+    color: rgb(116, 184, 66)
+}
+
+
+.create-order h2 {
+    color: rgb(116, 184, 66)
+}

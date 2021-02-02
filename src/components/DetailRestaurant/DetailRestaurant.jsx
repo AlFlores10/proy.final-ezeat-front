@@ -38,8 +38,9 @@ class DetailRestaurant extends Component {
                 <div className="restaurant-details" key={this.state.selectedRestaurant._id}>
                     <img alt={this.state.selectedRestaurant.name}
                         src={`https://image.tmdb.org/t/p/w300${this.state.selectedRestaurant.image}`}></img>
-                    <div className="name">Name: {this.state.selectedRestaurant.name}</div>
-                    <div className="adress">Adress: {this.state.selectedRestaurant.adress}</div>
+                    <div className="name">{this.state.selectedRestaurant.name}</div>
+                    <div className="adress">{this.state.selectedRestaurant.adress}</div>
+                    <div className="adress">{this.state.selectedRestaurant.email}</div>
                     {this.state.selectedRestaurant.menuID.map(menu => {
                         return (
                             <Link onClick = { () => this.selectMenu(menu)} className="menu">

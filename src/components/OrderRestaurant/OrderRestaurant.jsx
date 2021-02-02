@@ -40,7 +40,6 @@ class OrderRestaurant extends Component {
                                 <h2 key={ order.customerID._id}> {order.customerID.email.toString()} </h2><br/>
                                 <h2 key={ order.menuID._id}> {order.menuID.name.toString()} </h2><br/>
                                 <h2 key={ order.bill}> {order.bill.toString()} </h2><br/>
-                                <button onClick={() => {this.props.history.push('/menu/create')}}>ADD MENU</button>
                             </div>
                         </>
                     )
@@ -58,6 +57,7 @@ class OrderRestaurant extends Component {
         return (
             <>
                 <div>{this.showOrderRestaurants()}</div>
+                <button onClick={() => {this.props.history.push('/menu/create')}}>ADD MENU</button>
             </>
         )
     };
