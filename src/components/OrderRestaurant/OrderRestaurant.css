@@ -1,0 +1,36 @@
+.container-order-restaurant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1em;
+    color: rgb(248, 166, 55);
+    font-size: 1em;
+    background-color: rgb(99, 100, 102);
+}
+
+
+.order-restaurant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+    color: rgb(116, 184, 66)
+}
+
+.order-restaurant button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.container-order-restaurant h2 {
+    color: rgb(116, 184, 66)
+}

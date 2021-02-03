@@ -1,0 +1,23 @@
+.about {
+    display: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(116, 184, 66);
+}
+
+.about-text { 
+   margin-left: 20%;
+   margin-right: 20%;
+}
+
+
+.about h2 {
+    color: rgb(248, 166, 55);
+}

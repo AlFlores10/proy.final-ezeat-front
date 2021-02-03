@@ -1,0 +1,54 @@
+form.login {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70vh;
+    align-items: center;
+}
+
+.login input {
+    all: unset;
+    padding: 1em;
+    width: fit-content;
+    border-radius: 0.5em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.login select {
+    all: unset;
+    padding: 0.5em;
+    width: fit-content;
+    border-radius: 0.5em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+.login button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.login a:hover,
+.login button:hover {
+    color: rgb(99, 100, 102);
+    cursor: pointer;
+    background-color: rgb(248, 166, 55);
+}
+
+
+::placeholder {
+    color: rgb(116, 184, 66)
+}
+
+
+.login h2 {
+    color: rgb(116, 184, 66)
+}

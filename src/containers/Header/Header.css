@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(99, 100, 102);
+}
+
+.active {
+    background-color: rgb(248, 166, 55);
+}
+
+.header a,
+.header span {
+    all: unset;
+    color: rgb(249, 166, 53);
+    padding: 1em;
+    transition: all 0.5s;
+}
+
+.header a:hover,
+.header span:hover {
+    color: rgb(99, 100, 102);
+    cursor: pointer;
+    background-color: rgb(248, 166, 55);
+}
+
+.header img {
+    max-width: 50px;
+}

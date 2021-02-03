@@ -1,0 +1,32 @@
+.container-restaurant{
+    display: inline-flex;
+    width: 23%;
+    margin: 0.8em;
+    color: rgb(116, 184, 66);
+    font-size: 1em;
+    text-align: center;
+    background-color: rgb(99, 100, 102);
+}
+
+img {
+    max-width: 50%;
+}
+
+
+.img-restaurant {
+    cursor: pointer;
+    max-height: 50%;
+}
+
+
+.home-background {
+    background-image: url('../../assets/img/restaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -500px;
+    height: 300px;
+    color: rgb(116, 184, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

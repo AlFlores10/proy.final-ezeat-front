@@ -1,0 +1,39 @@
+.container-restaurant-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+
+.restaurant-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+    color: rgb(116, 184, 66)
+}
+
+
+.restaurant-details img {
+    max-width: 15%;
+}
+
+
+.restaurant-details li {
+    color: rgb(248, 166, 55);
+}
+
+
+.container-restaurant-details button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
