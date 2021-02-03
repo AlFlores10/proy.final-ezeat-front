@@ -19,8 +19,7 @@ const Login = () => {
             if (res.data.token === undefined) {
                 alert("Login Failed");
                 console.log(res.data.error);
-                localStorage.setItem('id', null);
-                localStorage.setItem('token', null);
+                localStorage.clear();
                 history.push('/');
             } else {
                 alert("Login OK");

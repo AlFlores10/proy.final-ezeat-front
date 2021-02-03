@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# proy.final-ezeat-front
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Repositories](#repositories)
 
-## Available Scripts
+### General Info
+***
+App de pedidos de comida a domicilio creado con React y CSS3.
 
-In the project directory, you can run:
+### Screenshot
+<a target='_blank' href='https://images.meteociel.fr/im/8092/index_owc8.png'><img src='https://images.meteociel.fr/im/8092/indexowc8_mini.png'></a>
+<a target='_blank' href='https://images.meteociel.fr/im/2264/register_restaurant_mxa6.png'><img src='https://images.meteociel.fr/im/2264/register_restaurantmxa6_mini.png'></a>
+<a target='_blank' href='https://images.meteociel.fr/im/4377/restaurant_detail_nou9.png'><img src='https://images.meteociel.fr/im/4377/restaurant_detailnou9_mini.png'></a>
+<a target='_blank' href='https://images.meteociel.fr/im/3768/restaurant_profile_ggs3.png'><img src='https://images.meteociel.fr/im/3768/restaurant_profileggs3_mini.png'></a>
+<a target='_blank' href='https://images.meteociel.fr/im/5503/menu_detail_lev4.png'><img src='https://images.meteociel.fr/im/5503/menu_detaillev4_mini.png'></a>
 
-### `npm start`
+## Technologies
+***
+Lista de tecnologías utilizadas en el proyecto:
+* [React](https://html.spec.whatwg.org/multipage/): Version 16
+* [JavaScript](https://html.spec.whatwg.org/multipage/) 
+* [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+***
+``` bash
+1. Click en Register para crear un nuevo usuario Customer o Restaurant.
+2. Click en Login para hacer login en la app. Dependiendo de si somos Customer o Restaurant, elegiremos nuestro login.
+3. Click en la imagen del restaurante para acceder a los menus.
+4. Click en el menu deseado.
+5. Click en Add Order para realizar un nuevo pedido.
+6. Click en Profile para acceder a nuestra informacion.
+7. Click en Update para actualizar la informacion de nuestro usuario.
+8. Click en Delete para eliminar nuestro usuario de la base de datos.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+## Repositories
+***
+> * [Repositorio GitHub](https://github.com/AlFlores10/proy.final-ezeat-front)
+> * [Heroku](https://proy-final-ezeat-front.herokuapp.com/)
+> * [Alberto Flores Martínez](https://github.com/AlFlores10)

@@ -17,7 +17,6 @@ const RegisterRestaurant = () => {
                 email: form.email.value,
                 adress: form.adress.value,
                 password: form.password.value,
-                delivery: form.delivery.value
             }
             if (restaurant.name && restaurant.email && restaurant.adress && restaurant.password) {
                 await axios.post('https://proy-final-ezeat.herokuapp.com/restaurant/signup', restaurant)
@@ -43,7 +42,6 @@ const RegisterRestaurant = () => {
             <input type="email" name="email" placeholder="Enter your Email" />
             <input type="text" name="adress" placeholder="Enter your Adress" />
             <input type="password" name="password" placeholder="Enter your Password" />
-            <input type="boolean" name="delivery" placeholder="Delivery (True or False)" />
             <button type="submit">Register</button>
         </form>
     )
