@@ -1,0 +1,46 @@
+form.update-customer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70vh;
+    align-items: center;
+}
+
+
+.update-customer input {
+    all: unset;
+    padding: 1em;
+    width: fit-content;
+    border-radius: 0.5em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.update-customer button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
+}
+
+
+.update-customer a:hover,
+.update-customer button:hover {
+    color: rgb(99, 100, 102);
+    cursor: pointer;
+    background-color: rgb(248, 166, 55);
+}
+
+
+::placeholder {
+    color: rgb(116, 184, 66)
+}
+
+
+.update-customer h2 {
+    color: rgb(116, 184, 66)
+}

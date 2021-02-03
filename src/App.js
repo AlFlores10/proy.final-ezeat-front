@@ -18,6 +18,7 @@ import DetailMenu from './components/DetailMenu/DetailMenu';
 import CreateMenu from './components/CreateMenu/CreateMenu';
 import OrderRestaurant from './components/OrderRestaurant/OrderRestaurant';
 import UpdateRestaurant from './components/UpdateRestaurant/UpdateRestaurant';
+import UpdateCustomer from './components/UpdateCustomer/UpdateCustomer';
 
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/menu/create" exact component={CreateMenu} />
           <Route path="/restaurant/profile" exact component={OrderRestaurant} />
           <Route path="/restaurant/update" exact component={UpdateRestaurant} />
+          <Route path="/customer/update" exact component={UpdateCustomer} />
 
 
         </Switch>
