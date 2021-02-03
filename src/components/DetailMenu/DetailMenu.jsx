@@ -34,7 +34,7 @@ class DetailMenu extends Component {
         }
         try {
             if (newOrder.customerID && newOrder.restaurantID && newOrder.menuID) {
-                await axios.post('http://localhost:3000/order', newOrder, { headers: { token } })
+                await axios.post('https://proy-final-ezeat.herokuapp.com/order', newOrder, { headers: { token } })
                 console.log(newOrder);
                 alert("Order Created Successfully")
                 this.props.history.push('/')

@@ -19,7 +19,7 @@ const RegisterCustomer = () => {
                 password: form.password.value,
             }
             if (customer.firstname && customer.lastname && customer.email && customer.password) {
-                await axios.post('http://localhost:3000/customer/signup', customer)
+                await axios.post('https://proy-final-ezeat.herokuapp.com/customer/signup', customer)
                 console.log(customer);
                 alert("Customer Created Successfully")
                 history.push('/')

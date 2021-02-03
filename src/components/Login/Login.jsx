@@ -15,7 +15,7 @@ const Login = () => {
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();
-            const res = await axios.post('http://localhost:3000/login', { email, password, role });
+            const res = await axios.post('https://proy-final-ezeat.herokuapp.com/login', { email, password, role });
             if (res.data.token === undefined) {
                 alert("Login Failed");
                 console.log(res.data.error);

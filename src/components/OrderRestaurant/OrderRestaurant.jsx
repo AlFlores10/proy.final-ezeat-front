@@ -21,7 +21,7 @@ class OrderRestaurant extends Component {
         const token = localStorage.getItem('token');
         const id = localStorage.getItem('id');
         try {
-            const dataOrders = await axios.get(`http://localhost:3000/order/profile/${id}`, {headers: {token}});
+            const dataOrders = await axios.get(`https://proy-final-ezeat.herokuapp.com/order/profile/${id}`, {headers: {token}});
             this.setState({ orders: dataOrders.data.data });
             console.log(dataOrders.data.data);
         } catch (error) {
@@ -34,7 +34,7 @@ class OrderRestaurant extends Component {
         const token = localStorage.getItem('token');
         const id = localStorage.getItem('id');
         try {
-            const deleteAccount = await axios.delete(`http://localhost:3000/restaurant/${id}`, {headers: {token}});
+            const deleteAccount = await axios.delete(`https://proy-final-ezeat.herokuapp.com/restaurant/${id}`, {headers: {token}});
             console.log(deleteAccount);
             localStorage.clear();
             this.props.history.push('/');

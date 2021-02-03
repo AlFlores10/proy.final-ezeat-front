@@ -20,7 +20,7 @@ const CreateMenu = () => {
             }
             if (newMenu.restaurantID && newMenu.name && newMenu.ingredient) {
                 const token = localStorage.getItem('token');
-                await axios.post('http://localhost:3000/menu', newMenu, { headers: { token } });
+                await axios.post('https://proy-final-ezeat.herokuapp.com/menu', newMenu, { headers: { token } });
                 console.log(newMenu);
                 alert("Menu Created Successfully")
                 history.push('/')

@@ -21,7 +21,7 @@ class ProfileCustomer extends Component {
         const token = localStorage.getItem('token');
         const id = localStorage.getItem('id');
         try {
-            const dataProfile = await axios.get(`http://localhost:3000/customer/${id}`, { headers: { token } });
+            const dataProfile = await axios.get(`https://proy-final-ezeat.herokuapp.com/customer/${id}`, { headers: { token } });
             this.setState({ profile: dataProfile.data });
             console.log(this.state.profile);
         } catch (error) {
@@ -34,7 +34,7 @@ class ProfileCustomer extends Component {
         const token = localStorage.getItem('token');
         const id = localStorage.getItem('id');
         try {
-            const deleteAccount = await axios.delete(`http://localhost:3000/customer/${id}`, { headers: { token } });
+            const deleteAccount = await axios.delete(`https://proy-final-ezeat.herokuapp.com/customer/${id}`, { headers: { token } });
             console.log(deleteAccount);
             localStorage.clear();
             this.props.history.push('/');

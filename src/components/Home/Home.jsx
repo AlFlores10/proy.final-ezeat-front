@@ -20,7 +20,7 @@ class Home extends Component {
 
     getAllRestaurants = async () => {
         try {
-            const dataRestaurants = await axios.get('http://localhost:3000/restaurant');
+            const dataRestaurants = await axios.get('https://proy-final-ezeat.herokuapp.com/restaurant');
             this.setState({ restaurants: dataRestaurants.data });
             console.log(this.state.restaurants);
         } catch (error) {

@@ -19,7 +19,7 @@ const UpdateRestaurant = () => {
             }
             if (restaurant.password) {
                 const token = localStorage.getItem('token');
-                await axios.patch('http://localhost:3000/restaurant', restaurant, { headers: { token } })
+                await axios.patch('https://proy-final-ezeat.herokuapp.com/restaurant', restaurant, { headers: { token } })
                 console.log(restaurant);
                 alert("Restaurant Updated Successfully")
                 history.push('/')

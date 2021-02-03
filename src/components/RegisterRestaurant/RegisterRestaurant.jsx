@@ -20,7 +20,7 @@ const RegisterRestaurant = () => {
                 delivery: form.delivery.value
             }
             if (restaurant.name && restaurant.email && restaurant.adress && restaurant.password) {
-                await axios.post('http://localhost:3000/restaurant/signup', restaurant)
+                await axios.post('https://proy-final-ezeat.herokuapp.com/restaurant/signup', restaurant)
                 console.log(restaurant);
                 alert("Restaurant Created Successfully")
                 history.push('/')

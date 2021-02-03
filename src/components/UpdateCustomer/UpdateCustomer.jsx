@@ -19,7 +19,7 @@ const UpdateCustomer = () => {
             }
             if (customer.password) {
                 const token = localStorage.getItem('token');
-                await axios.patch('http://localhost:3000/customer', customer, { headers: { token } })
+                await axios.patch('https://proy-final-ezeat.herokuapp.com/customer', customer, { headers: { token } })
                 console.log(customer);
                 alert("Customer Updated Successfully")
                 history.push('/')
