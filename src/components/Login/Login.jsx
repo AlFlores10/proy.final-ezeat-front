@@ -27,6 +27,7 @@ const Login = () => {
                 console.log(res.data);
                 localStorage.setItem('id', res.data._id);
                 localStorage.setItem('token', res.data.token);
+                localStorage.setItem('role', res.data.role);
 
                 if (role ==='restaurant') {
                     history.push('/restaurant/profile');
