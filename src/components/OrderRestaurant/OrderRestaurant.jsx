@@ -74,7 +74,7 @@ class OrderRestaurant extends Component {
                 <div>{this.showOrderRestaurants()}</div><br/>
                 <div className="order-restaurant">
                 <button onClick={() => {this.props.history.push('/menu/create')}}>ADD NEW MENU</button><br/>
-                <button onClick={() => {this.props.history.push('/menu/update')}}>UPDATE ACCOUNT</button><br/>
+                <button onClick={() => {this.props.history.push('/restaurant/update')}}>UPDATE ACCOUNT</button><br/>
                 <button onClick={() => {this.deleteAccount()}}>DELETE ACCOUNT</button><br/>
                 </div>
             </>
