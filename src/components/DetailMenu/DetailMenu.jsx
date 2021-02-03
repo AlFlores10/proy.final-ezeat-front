@@ -19,7 +19,7 @@ class DetailMenu extends Component {
 
 
     btnBack = () => {
-        this.props.history.push('/');
+        this.props.history.push('/restaurant');
     };
 
 
@@ -33,49 +33,56 @@ class DetailMenu extends Component {
             bill: 'cash'
         }
         try {
-            await axios.post('http://localhost:3000/order', newOrder, {headers: {token}})
-            console.log(order);
-            alert("Order Created Successfully")
-            this.props.history.push('/')
+            if (newOrder.customerID && newOrder.restaurantID && newOrder.menuID) {
+                await axios.post('http://localhost:3000/order', newOrder, { headers: { token } })
+                console.log(newOrder);
+                alert("Order Created Successfully")
+                this.props.history.push('/')
+            } else {
+                console.log(newOrder);
+                alert("Error Creating Order")
+            }
         } catch (error) {
-
+            console.log(error);
+            alert("Order Error")
         }
-};
+    };
 
 
-showData = () => {
-    if (this.state.selectedMenu?._id) {
+    showData = () => {
+        if (this.state.selectedMenu?._id) {
+            return (
+                <>
+                    <div className="container-menu-details" key={this.state.selectedMenu._id}>
+                        <h2>{this.state.selectedMenu.name}</h2>
+                        {this.state.selectedMenu.ingredient.map(ingredient => {
+                            return (
+                                <h3>{ingredient}</h3>
+                            )
+                        })
+                        }
+                    </div>
+                </>
+            )
+        } else {
+            return (
+                <div>LOADING DATA...</div>
+            )
+        }
+    };
+
+
+    render() {
         return (
-            <div className="menu-details" key={this.state.selectedMenu._id}>
-
-                <div className="name">{this.state.selectedMenu.name}</div>
-                {this.state.selectedMenu.ingredient.map(ingredient => {
-                    return (
-                        <div className="menu">
-                            {ingredient}
-                        </div>
-                    )
-                })
-                }
-            </div>
+            <>
+                {this.showData()}<br />
+                <div className="menu-details" key={this.state.selectedMenu._id}>
+                    <button onClick={() => this.createOrder()}> ADD ORDER</button><br />
+                    <button onClick={() => this.btnBack()}> BACK RESTAURANT</button><br />
+                </div>
+            </>
         )
-    } else {
-        return (
-            <div>LOADING DATA...</div>
-        )
-    }
-};
-
-
-render() {
-    return (
-        <div className="container-menu-details" key={this.state.selectedMenu._id}>
-            {this.showData()}
-            <button onClick={() => this.btnBack()}> BACK HOME PAGE</button><br />
-            <button onClick={() => this.createOrder()}> ADD ORDER</button>
-        </div>
-    )
-};
+    };
 }
 
 export default DetailMenu;

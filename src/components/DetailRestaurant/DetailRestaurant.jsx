@@ -37,17 +37,17 @@ class DetailRestaurant extends Component {
             return (
                 <div className="restaurant-details" key={this.state.selectedRestaurant._id}>
                     <img alt={this.state.selectedRestaurant.name}
-                        src={`https://image.tmdb.org/t/p/w300${this.state.selectedRestaurant.image}`}></img>
-                    <div className="name">{this.state.selectedRestaurant.name}</div>
-                    <div className="adress">{this.state.selectedRestaurant.adress}</div>
-                    <div className="adress">{this.state.selectedRestaurant.email}</div>
+                        src={this.state.selectedRestaurant.image}></img>
+                    <h3><b>{this.state.selectedRestaurant.name}</b></h3>
+                    <h3>{this.state.selectedRestaurant.adress}</h3>
+                    <h3>{this.state.selectedRestaurant.email}</h3>
                     {this.state.selectedRestaurant.menuID.map(menu => {
                         return (
-                            <Link onClick = { () => this.selectMenu(menu)} className="menu">
-                                {menu.name}
+                            <Link onClick={() => this.selectMenu(menu)} className="menu">
+                                <li>{menu.name}</li><br />
                             </Link>
                         )
-                        })
+                    })
                     }
                 </div>
             )
@@ -65,7 +65,7 @@ class DetailRestaurant extends Component {
     render() {
         return (
             <div className="container-restaurant-details" key={this.state.selectedRestaurant._id}>
-                {this.showData()}
+                {this.showData()}<br />
                 <button onClick={() => this.btnBack()}> BACK HOME PAGE</button>
             </div>
         )

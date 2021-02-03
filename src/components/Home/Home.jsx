@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import axios from 'axios';
 
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -33,21 +34,19 @@ class Home extends Component {
             return (
                 this.state.restaurants.map(restaurant => {
                     return (
-                        <>
-                            <div className="container-restaurant" key={restaurant.id}>
-                                <h2> {restaurant.name} </h2>
-                                <h2> {restaurant.adress} </h2>
-                                <h2> {restaurant.email} </h2>
-                                <img className="img-restaurant" onClick={() => this.selectRestaurant(restaurant)} 
-                                alt={restaurant.name} src={`http://localhost:3000/{film.poster_path}`}></img>
+                        <div className="container-restaurant" key={restaurant.id}>
+                            <div>
+                                <h3>{restaurant.name}</h3>
+                                <img className="img-restaurant" onClick={() => this.selectRestaurant(restaurant)}
+                                    alt={restaurant.name} src={restaurant.image}></img>
                             </div>
-                        </>
+                        </div>
                     )
                 })
             )
         } else {
             return (
-                <div> CARGANDO LOS DATOS...</div>
+                <div> LOADING DATA...</div>
             )
         };
     };
@@ -62,6 +61,9 @@ class Home extends Component {
     render() {
         return (
             <>
+                <div className="home-background">
+                    <h1>EzEAT</h1>
+                </div>
                 <div>{this.showRestaurants()}</div>
             </>
         )

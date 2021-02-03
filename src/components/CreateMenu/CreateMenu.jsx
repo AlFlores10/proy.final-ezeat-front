@@ -20,7 +20,7 @@ const CreateMenu = () => {
             }
             if (newMenu.restaurantID && newMenu.name && newMenu.ingredient) {
                 const token = localStorage.getItem('token');
-                await axios.post('http://localhost:3000/menu', newMenu, {headers: {token}});
+                await axios.post('http://localhost:3000/menu', newMenu, { headers: { token } });
                 console.log(newMenu);
                 alert("Menu Created Successfully")
                 history.push('/')
@@ -40,7 +40,7 @@ const CreateMenu = () => {
         <form className="create-menu" onSubmit={handleSubmit}>
             <h2>Create Menu</h2>
             <input type="text" name="name" placeholder="Enter your Menu Name" />
-            <input type="text" name="ingredient" placeholder="Enter your Ingredient" />
+            <input type="text" name="ingredient" placeholder="Enter your Ingredients" />
             <button type="submit">Create</button>
         </form>
     )

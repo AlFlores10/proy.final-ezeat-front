@@ -4,13 +4,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 100vh;
+    margin: 1em;
+    color: rgb(248, 166, 55);
+    font-size: 1em;
+    background-color: rgb(99, 100, 102);
 }
 
-img {
-    max-width: 50%;
-}
 
 .menu-details{
     display: flex;
@@ -18,33 +17,21 @@ img {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(121, 32, 32);
-    /* background-color: rgb(121, 32, 32); */
+    font-size: 1em;
+    color: rgb(116, 184, 66)
 }
 
 
-.name{
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0.5rem;
+.menu-details img {
+    max-width: 15%;
 }
 
 
-.adress{
-    font-weight: bold;
-    margin: 0.5rem;
-}
-
-
-.delivery{
-    font-size: 1rem;
-    margin: 0.5rem;
-
-}
-
-
-.menu{
-    font-weight: bold;
-    margin: 0.5rem;
+.menu-details button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgb(99, 100, 102);
+    color: rgb(249, 166, 53);
 }

@@ -29,6 +29,20 @@ class OrderRestaurant extends Component {
         };
     };
 
+
+    deleteAccount = async () => {
+        const token = localStorage.getItem('token');
+        const id = localStorage.getItem('id');
+        try {
+            const deleteAccount = await axios.delete(`http://localhost:3000/restaurant/${id}`, {headers: {token}});
+            console.log(deleteAccount);
+            localStorage.clear();
+            this.props.history.push('/');
+        } catch (error) {
+            console.log(error);
+        };
+    };
+
     showOrderRestaurants = () => {
         if (this.state.orders) {
             return (
@@ -36,10 +50,11 @@ class OrderRestaurant extends Component {
                     return (
                         <>
                             <div className="container-order-restaurant" key={order._id}>
-                                <h2 key={ order.restaurantID._id}> {order.restaurantID.name.toString()}</h2><br/>
-                                <h2 key={ order.customerID._id}> {order.customerID.email.toString()} </h2><br/>
-                                <h2 key={ order.menuID._id}> {order.menuID.name.toString()} </h2><br/>
-                                <h2 key={ order.bill}> {order.bill.toString()} </h2><br/>
+                                <h2>ID Order:</h2> {order._id.toString()}<br/>
+                                <h2>Restaurant:</h2> {order.restaurantID.name.toString()}<br/>
+                                <h2>Customer:</h2> {order.customerID.email.toString()} <br/>
+                                <h2>Order:</h2> {order.menuID.name.toString()} <br/>
+                                <h2>Pay:</h2> {order.bill.toString()}<br/><br/>
                             </div>
                         </>
                     )
@@ -47,7 +62,7 @@ class OrderRestaurant extends Component {
             )
         } else {
             return (
-                <div> CARGANDO LOS DATOS...</div>
+                <div> LOADING DATA...</div>
             )
         };
     };
@@ -56,8 +71,12 @@ class OrderRestaurant extends Component {
     render() {
         return (
             <>
-                <div>{this.showOrderRestaurants()}</div>
-                <button onClick={() => {this.props.history.push('/menu/create')}}>ADD MENU</button>
+                <div>{this.showOrderRestaurants()}</div><br/>
+                <div className="order-restaurant">
+                <button onClick={() => {this.props.history.push('/menu/create')}}>ADD NEW MENU</button><br/>
+                <button onClick={() => {this.props.history.push('/menu/update')}}>UPDATE ACCOUNT</button><br/>
+                <button onClick={() => {this.deleteAccount()}}>DELETE ACCOUNT</button><br/>
+                </div>
             </>
         )
     };
