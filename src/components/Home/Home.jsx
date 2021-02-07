@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 import axios from 'axios';
+import logo from '../../assets/img/logo_size_invert.jpg'
 
 
 class Home extends Component {
@@ -62,7 +63,7 @@ class Home extends Component {
         return (
             <>
                 <div className="home-background">
-                    <h1>EzEAT</h1>
+                    <img src={logo} alt="logo.jpg"></img>
                 </div>
                 <div>{this.showRestaurants()}</div>
             </>

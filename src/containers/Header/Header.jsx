@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Header.css';
-import logo from '../../assets/img/logo.jpg';
+import logo from '../../assets/img/logo_size_invert.jpg';
 
 const Header = () => {
     const history = useHistory();

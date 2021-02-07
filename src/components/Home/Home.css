@@ -6,6 +6,7 @@
     font-size: 1em;
     text-align: center;
     background-color: rgb(99, 100, 102);
+    height: 12em;
 }
 
 img {
@@ -29,4 +30,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.home-background img {
+    opacity: 3%;
 }
